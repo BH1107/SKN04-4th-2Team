@@ -1,0 +1,20 @@
+# environment.yml
+name: best_laptop_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - django=4.2
+  - openai=1.56.1
+  - langchain_openai=0.2.11
+  - langchain_community=0.3.9
+  - faiss-cpu
+  - psycopg2
+  - boto3
+  - django-storages
+  - python-dotenv
+  - djangorestframework
+  - django-cors-headers
+  - pillow
+  - pip
