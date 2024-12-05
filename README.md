@@ -1,4 +1,4 @@
-# 🤗 팀명 : 병헌이 구른다
+# 🤗 팀명 : 구른다
  
 ### 🤭 팀원
 
@@ -27,19 +27,21 @@
 ### 💼 역할 분담
 
 ### 👨‍💻 김정훈
-- **Backend**: Streamlit으로 구현된 페이지를 Django로 이식함
-- **Frontend**: Streamlit으로 구현된 페이지를 Django로 이식함
-
+- **Backend**: Streamlit으로 구현된 페이지를 Django로 이식함 (공동작업)
+- **Frontend**: Streamlit으로 구현된 페이지를 html 형식으로 변경  (공동작업)
+- **test 코드 작성** : 구현된 페이지를 테스트하는 코드 작성
 ### 👨‍💻 박병헌
 - **상세 페이지 설계서 작성** : Django로 페이지를 이식하기 위한 상세 페이지 설계서 작성
+- **Backend**: Streamlit으로 구현된 페이지를 Django로 이식함  (공동작업)
+- **Frontend**: Streamlit으로 구현된 페이지를 html 형식으로 변경 (공동작업)
 - **README 작성** 
 
 ### 👩‍💻 이지수
 - **요구사항 정의서 작성** : Django로 페이지를 이식하기 위한 요구사항 정의서 작성
-- **AWS 배포**: 작성된 페이지를 AWS에서 docker을 이용한 배포
+- **AWS 배포**: Django로 제작된 페이지를 AWS환경에서 배포
 
 ### 👨‍💻 오종수
-- **조장**  
+- **조장**
 
 ---
 
@@ -79,30 +81,50 @@ csv 파일로 저장된 데이터를 document에 저장하여 metadata를 추가
 
 
 
-cmd
+### Conda 환경 생성 및 활성화
 ```
-pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate best_laptop_env
 ```
 ---
 
-아래와 같은 .env 환경변수 파일 필요 
+.env 환경변수 파일 필요 
 
 <p>
 
+```
 OPENAI_API_KEY ="sk-*******************************************************************"
-<br>
-csv_path ="./data/csv/all_laptop_data.csv"
-<br>
 faiss_path ="./data/db"
+```
 
-
+.env.prod 파일 필요
+```
+DEBUG=0
+SECRET_KEY=****************************************
+DJANGO_ALLOWED_HOSTS=localhost ******************* [::1]
+SQL_ENGINE=django.db.backends.postgresql
+SQL_DATABASE=postgres
+SQL_USER=postgres
+SQL_PASSWORD=****
+SQL_HOST=best-laptop.c****************************
+SQL_PORT=5432
+```
+.env.prod.db 파일 필요
+```
+POSTGRES_USER=************************
+POSTGRES_PASSWORD=***************************************
+POSTGRES_DB=**************************
+```
 
 
 ## Usage
 
 AWS 에서 EC2 인스턴스을 만들어 다음 명령어를 입력
 ```cmd
-
+sudo apt-get update
+sudo apt-get install docker.io docker-compose
+sudo docker-compose up -d --build
+sudo docker-compose exec web python manage.py collectstatic
 ```
 ```cmd
 본인이 설정한 EC2 환경의 Ip주소로 접속
@@ -113,12 +135,12 @@ AWS 에서 EC2 인스턴스을 만들어 다음 명령어를 입력
 ### 프로그램의 전체적인 구성 도표 삽입 및 설명
 
 <p>
-
+  <img src="readmeImage/Architecture.png" alt="이미지 설명" width="500" height="350">
 </p>
 
 저희 시스템은 Selenium을 통해 크롤링한 데이터를 FAISS(Vector DB)에 임베딩하여 벡터 기반 검색을 수행합니다.   
-사용자가 Streamlit에 입력한 질문은 retriever와 체인 모델을 거쳐, 저희가 개발한 모델로 응답이 생성됩니다.   
-최종 결과는 Streamlit을 통해 사용자에게 직관적으로 제공됩니다.  
+사용자가 입력한 질문은 retriever와 체인 모델을 거쳐, 저희가 개발한 모델로 응답이 생성됩니다.   
+최종 결과는 배포된 웹 페이지를 통해 사용자에게 직관적으로 제공됩니다.  
  
 ---
 
@@ -138,7 +160,7 @@ AWS 에서 EC2 인스턴스을 만들어 다음 명령어를 입력
 <br>
 **Django로 구현하여 배포한 페이지**
 <p>
-
+  
 </p>
 
 위의 요구사항 정의서와 상세 페이지 설계서를 반영하여 Django를 통해 Front-end와 Back-end를 구축하고 AWS를 통해 배포 하였습니다.
@@ -147,13 +169,14 @@ AWS 에서 EC2 인스턴스을 만들어 다음 명령어를 입력
 
 
 ### 👨‍💻 김정훈
-- LangChain을 활용한 작업은 정말 흥미로웠습니다. 다양한 기능들이 유기적으로 연결되어, 복잡한 자연어 처리 작업을 효율적으로 처리할 수 있는 강력한 도구라는 생각이 들었습니다. 특히, LLM을 활용한 파이프라인 구축과 데이터 연결 작업이 매우 직관적이고 유연하게 처리되어 작업의 생산성을 크게 높일 수 있었습니다.
+- 테스트케이스를 작성하고 여러가지 작업들을 도와주며 한층 더 성장할 수 있는 기회가 되었습니다.
 
 ### 👨‍💻 박병헌
 - streamlit으로 구현된 페이지를 django로 옮기는 것이 간단할 것 이라 생각했지만 django의 back-end 작업에서 어려움을 겪었다. 하지만 조원 모두 힘을 합쳐 해결하였다. 최종적으로 저번 프로젝트와 연계하여 완성된 하나의 프로젝트를 완수하여 성취감을 느낄 수 있었다.
 ### 👩‍💻 이지수
-- LLM에 관련된 주제의 프로젝트를 경험한 것이 색다른 느낌이 들었습니다.   
-시간이 촉박하여 프로젝트를 완성도 있게 만들지 못한 점이 매우 아쉬웠습니다.
+- 이번 프로젝트에서 aws에서 환경 설정을 세팅하는 역할을 맡았고,
+aws에서 웹 페이지를 동작할 수 있는 프로젝트를 진행한 것이 좋은 경험이 되었다고 생각합니다. 
+실전에서 잘 응용할 수 있는 밑거름이 되었다고 생각합니다. 
 
 ### 👨‍💻 오종수
-- 새로운 도전 속에서 많은 것을 배우고 성장할 수 있었던 프로젝트였습니다
+- 팀원들과 함께 목표를 달성한 것이 매우 뜻깊은 경험이었습니다
