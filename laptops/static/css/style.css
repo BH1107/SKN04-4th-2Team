@@ -1,0 +1,178 @@
+/* 기본 스타일 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "맑은 고딕", sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.fixed-header {
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+/* 헤더 콘텐츠 영역 */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 메인 컨테이너 */
+.container {
+    width: 95%;
+    max-width: 900px;
+    margin: 80px auto 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* 설명 텍스트 */
+.description {
+    padding: 16px 20px;
+    color: #5f6368;
+    border-bottom: 1px solid #e8eaed;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 채팅 영역 */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    min-height: calc(100vh - 300px);
+    max-height: calc(100vh - 300px);
+}
+
+/* 메시지 스타일 */
+.message {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message .bubble {
+    max-width: 65%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* 사용자 메시지 */
+.message.user .bubble {
+    background: #1a73e8;
+    color: #fff;
+    border-bottom-right-radius: 4px;
+    margin-left: 40px;
+}
+
+/* 챗봇 메시지 */
+.message.assistant .bubble {
+    background: #f1f3f4;
+    color: #202124;
+    border-bottom-left-radius: 4px;
+    margin-right: 40px;
+}
+
+/* 입력 영역 */
+.input-area {
+    padding: 16px 20px;
+    border-top: 1px solid #e8eaed;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: #fff;
+}
+
+/* 입력 필드 */
+.input-area input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #dadce0;
+    border-radius: 24px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.input-area input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+}
+
+/* 전송 버튼 */
+.input-area button {
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.input-area button:hover {
+    background: #1557b0;
+}
+
+/* 진행바 */
+.progress-bar {
+    height: 3px;
+    background: #f1f3f4;
+    overflow: hidden;
+}
+
+.progress-bar .progress {
+    width: 0;
+    height: 100%;
+    background: #1a73e8;
+    transition: width 0.6s ease;
+    display: none;
+}
+
+/* 스크롤바 */
+.container ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container ::-webkit-scrollbar-thumb {
+    background: #dadce0;
+    border-radius: 4px;
+}
+
+.container ::-webkit-scrollbar-thumb:hover {
+    background: #bdc1c6;
+}
