@@ -34,7 +34,6 @@ async function sendMessage() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRFToken': getCookie('csrftoken')
             },
             body: JSON.stringify({
                 message: userInput.value
