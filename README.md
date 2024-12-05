@@ -169,7 +169,7 @@ sudo docker-compose exec web python manage.py collectstatic
 <br>
 **Django로 구현하여 배포한 페이지**
 <p>
-  
+  <img src="readmeImage\page.png" alt="이미지 설명" width="500" height="350">
 </p>
 
 위의 요구사항 정의서와 상세 페이지 설계서를 반영하여 Django를 통해 Front-end와 Back-end를 구축하고 AWS를 통해 배포 하였습니다.
