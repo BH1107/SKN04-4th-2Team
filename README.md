@@ -88,7 +88,7 @@ conda activate best_laptop_env
 ```
 ---
 
-.env 환경변수 파일 필요 
+### .env 환경변수 파일 필요 
 
 <p>
 
@@ -97,7 +97,7 @@ OPENAI_API_KEY ="sk-************************************************************
 faiss_path ="./data/db"
 ```
 
-.env.prod 파일 필요
+### .env.prod 파일 필요
 ```
 DEBUG=0
 SECRET_KEY=****************************************
@@ -109,7 +109,7 @@ SQL_PASSWORD=****
 SQL_HOST=best-laptop.c****************************
 SQL_PORT=5432
 ```
-.env.prod.db 파일 필요
+### .env.prod.db 파일 필요
 ```
 POSTGRES_USER=************************
 POSTGRES_PASSWORD=***************************************
@@ -143,6 +143,15 @@ sudo docker-compose exec web python manage.py collectstatic
 최종 결과는 배포된 웹 페이지를 통해 사용자에게 직관적으로 제공됩니다.  
  
 ---
+## Test Case
+
+### 잘못된 질문 예시 케이스
+<img src="readmeImage\test1.png" alt="이미지 설명" width="" height="500">
+<img src="readmeImage\test2.png" alt="이미지 설명" width="" height="500">
+
+### 올바른 질문 예시 케이스
+<img src="readmeImage\test3.png" alt="이미지 설명" width="" height="500">
+
 
 ## 수행 결과
 
