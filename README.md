@@ -1,4 +1,4 @@
-# 🤗 팀명 : 구른다
+# 🤗 팀명 : Rolling
  
 ### 🤭 팀원
 
@@ -6,72 +6,72 @@
   <table>
 	<tr>
 	  <td align="center">
-		<img src="https://pbs.twimg.com/media/D07FPC9WwAYZ1k1.jpg" width="160" height="160"/><br>오종수 [팀장]
+		<img src="https://pbs.twimg.com/media/D07FPC9WwAYZ1k1.jpg" width="160" height="160"/><br>오종수 <p> O Jong Su  <p> [팀장] Team Manager
 	  </td>
 	  <td align="center">
-		<img src="https://upload3.inven.co.kr/upload/2020/04/15/bbs/i13843617916.jpg" width="160" height="160"/><br>김효은
+		<img src="https://upload3.inven.co.kr/upload/2020/04/15/bbs/i13843617916.jpg" width="160" height="160"/><br>김효은 <p> Kim Hyo Eun
 	  </td>
 	  <td align="center">
-		<img src="https://i.namu.wiki/i/CFdrduUAhyuiXzPMZ-WKsUJtGCuWOvzYLcIAdrcjZ2D7x4q3W1TxkGIYmBKTohKEM1vUNtgeZtilVHwCe2q17g.webp" width="160" height="160"/><br>박병헌
+		<img src="https://i.namu.wiki/i/CFdrduUAhyuiXzPMZ-WKsUJtGCuWOvzYLcIAdrcjZ2D7x4q3W1TxkGIYmBKTohKEM1vUNtgeZtilVHwCe2q17g.webp" width="160" height="160"/><br>박병헌 <p>Park Byung Hun
 	  </td>
 	  <td align="center">
-		<img src="https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon4895.jpg?image=e_upscale,q_auto:good,f_webp,w_auto&v=1729058249" width="160" height="160"/><br>김정훈
+		<img src="https://opgg-static.akamaized.net/meta/images/profile_icons/profileIcon4895.jpg?image=e_upscale,q_auto:good,f_webp,w_auto&v=1729058249" width="160" height="160"/><br>김정훈 <p> Kim Jeong Hun
 	  </td>
 	  <td align="center">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-N5LKksvNwRIUWWcxuqWD2s52XO84KSOtdg&s" width="160" height="160"/><br>이지수
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-N5LKksvNwRIUWWcxuqWD2s52XO84KSOtdg&s" width="160" height="160"/><br>이지수 <p> Lee Ji Su
 	  </td>
 	</tr>
   </table>
 </p>
 
-### 💼 역할 분담
+### 💼 Role
 
-### 👨‍💻 김정훈
-- **Backend**: Streamlit으로 구현된 페이지를 Django로 이식함 (공동작업)
-- **Frontend**: Streamlit으로 구현된 페이지를 html 형식으로 변경  (공동작업)
-- **test 코드 작성** : 구현된 페이지를 테스트하는 코드 작성
-### 👨‍💻 박병헌
-- **상세 페이지 설계서 작성** : Django로 페이지를 이식하기 위한 상세 페이지 설계서 작성
-- **Backend**: Streamlit으로 구현된 페이지를 Django로 이식함  (공동작업)
-- **Frontend**: Streamlit으로 구현된 페이지를 html 형식으로 변경 (공동작업)
-- **README 작성** 
+### 👨‍💻 김정훈 Kim Jeong Hun
+- **Backend**:  Migrated Streamlit page to Django (collaborative work)
+- **Frontend**: Converted Streamlit page to HTML format (collaborative work)
+- **tTest Code** : Wrote test code for the implemented page
+### 👨‍💻 박병헌 Park Byung Hun
+- **Detailed Page Design** : Wrote detailed page design document for Django migration
+- **Backend**:  Migrated Streamlit page to Django (collaborative work)
+- **Frontend**: Converted Streamlit page to HTML format (collaborative work)	
+- **README** : Authored the README file
 
-### 👩‍💻 이지수
-- **요구사항 정의서 작성** : Django로 페이지를 이식하기 위한 요구사항 정의서 작성
-- **AWS 배포**: Django로 제작된 페이지를 AWS환경에서 배포
+### 👩‍💻 이지수 Lee Ji Su
+- **Requirements Specification:** : Authored the requirement specification document for Django migration
+- **AWS Deployment**: Deployed the Django-based page on AWS
 
-### 👨‍💻 오종수
-- **조장**
+### 👨‍💻 오종수 O Jong Su
+- **Team Leader**
 
 ---
 
-## 프로젝트 개요
-- **상세 페이지 설계서 작성**
-- **요구사항 정의서 작성**
-- **streamlit으로 구현된 페이지를 django로 이식** 
-- **AWS 배포**
+## Project Overview
+- **Detailed page design document creation**
+- **Requirement specification document creation**
+- **Migration from Streamlit to Django** 
+- **Deployment on AWS**
 
 
-이 프로젝트는 다나와 사이트에서 노트북 제품 정보를 **크롤링**하여, 사용자가 입력하는 질문에 대해 할루시네이션이 없는 답변을 제공하는 **대화형 챗봇**  streamlit 페이지를 django로 이식하여 배포까지 진행하는 프로젝트입니다.
+This project involves crawling laptop product information from the Danawa site to build an **i**nteractive chatbot** that provides **hallucination-free** answers to user queries. The chatbot, originally built in Streamlit, was **migrated to Django and deployed**.
 
 ## Data
 
-다나와 사이트(https://prod.danawa.com/list/?cate=112758)에서 셀레니움을 통해 크롤링하여 노트북 데이터를 수집 하였습니다. 
+- Laptop data was collected via Selenium from the Danawa website (https://prod.danawa.com/list/?cate=112758).
 <br>
-수집한 데이터 : 노트북 모델명, 상세 스펙, 가격
+- Collected data: Laptop model name, detailed specifications, price
 
 
 ## Preprocess
 
-csv 파일로 저장된 데이터를 document에 저장하여 metadata를 추가하고 contents에 불필요한 문자를 제거하여 정제했습니다.
+- The data saved as a CSV file was loaded into a document format, with metadata added and unnecessary characters in the contents removed for cleaning.
 <br>
-정제된 데이터를 'text-embedding-3-small'모델을 사용하여 Faiss DB에 임베딩하여 저장했습니다.
+- The cleaned data was embedded and stored in Faiss DB using the 'text-embedding-3-small' model.
 
 ---
 
 
 
-## 기술 스텍
+## Tech Stack
 
 | Data Modeling | SCM | Front-End / Back-End | Deploy |
 |-----------------|--------|---------------------|------------------|
@@ -81,14 +81,14 @@ csv 파일로 저장된 데이터를 document에 저장하여 metadata를 추가
 
 
 
-### Conda 환경 생성 및 활성화
+### Create and Activate Conda Environment
 ```
 conda env create -f environment.yml
 conda activate best_laptop_env
 ```
 ---
 
-### .env 환경변수 파일 필요 
+### Required .env file 
 
 <p>
 
@@ -97,7 +97,7 @@ OPENAI_API_KEY ="sk-************************************************************
 faiss_path ="./data/db"
 ```
 
-### .env.prod 파일 필요
+### Required .env.prod file
 ```
 DEBUG=0
 SECRET_KEY=****************************************
@@ -109,7 +109,7 @@ SQL_PASSWORD=****
 SQL_HOST=best-laptop.c****************************
 SQL_PORT=5432
 ```
-### .env.prod.db 파일 필요
+### Required .env.prod.db file
 ```
 POSTGRES_USER=************************
 POSTGRES_PASSWORD=***************************************
@@ -119,7 +119,7 @@ POSTGRES_DB=**************************
 
 ## Usage
 
-AWS 에서 EC2 인스턴스을 만들어 다음 명령어를 입력
+After launching an EC2 instance on AWS, run the following commands:
 ```cmd
 sudo apt-get update
 sudo apt-get install docker.io docker-compose
@@ -127,65 +127,61 @@ sudo docker-compose up -d --build
 sudo docker-compose exec web python manage.py collectstatic
 ```
 ```cmd
-본인이 설정한 EC2 환경의 Ip주소로 접속
+Access via your EC2 IP address
 ```
 
 ## System Architecture
-
-### 프로그램의 전체적인 구성 도표 삽입 및 설명
 
 <p>
   <img src="readmeImage/Architecture.png" alt="이미지 설명" width="500" height="350">
 </p>
 
-저희 시스템은 Selenium을 통해 크롤링한 데이터를 FAISS(Vector DB)에 임베딩하여 벡터 기반 검색을 수행합니다.   
-사용자가 입력한 질문은 retriever와 체인 모델을 거쳐, 저희가 개발한 모델로 응답이 생성됩니다.   
-최종 결과는 배포된 웹 페이지를 통해 사용자에게 직관적으로 제공됩니다.  
+Our system embeds data crawled via Selenium into FAISS (Vector DB) for vector-based search.
+User questions pass through a retriever and chain model, and our custom model generates responses.
+The final results are intuitively presented to users through the deployed web page.
  
 ---
 ## Test Case
 
-### 잘못된 질문 예시 케이스
+### Incorrect question example
 <img src="readmeImage\test1.png" alt="이미지 설명" width="" height="500">
 <img src="readmeImage\test2.png" alt="이미지 설명" width="" height="500">
 
-### 올바른 질문 예시 케이스
+### Correct question example
 <img src="readmeImage\test3.png" alt="이미지 설명" width="" height="500">
 
 
-## 수행 결과
+## Result
 
-**요구사항 정의서**
+**Requirement Specification Document**
 <p>
   <img src="readmeImage\SRS.png" alt="이미지 설명" width="" height="200">
 </p>
 
-**상세 페이지 설계서**
+**Detailed Page Design**
 <p>
   <img src="readmeImage\detailpagestructre.png" alt="이미지 설명" width="500" height="350">
 </p>
 
 
 <br>
-**Django로 구현하여 배포한 페이지**
+**Deployed Django Page**
 <p>
   <img src="readmeImage\page.png" alt="이미지 설명" width="500" height="350">
 </p>
 
-위의 요구사항 정의서와 상세 페이지 설계서를 반영하여 Django를 통해 Front-end와 Back-end를 구축하고 AWS를 통해 배포 하였습니다.
+Reflecting the requirement specification and detailed page design, we built the front-end and back-end using Django and deployed it via AWS.
 
-## 한 줄 소감
+## Final Thoughts
 
 
-### 👨‍💻 김정훈
-- 테스트케이스를 작성하고 여러가지 작업들을 도와주며 한층 더 성장할 수 있는 기회가 되었습니다.
+### 👨‍💻 김정훈 Kim Jeong Hun
+- Writing test cases and contributing to various tasks was a great opportunity for personal growth.
 
-### 👨‍💻 박병헌
-- streamlit으로 구현된 페이지를 django로 옮기는 것이 간단할 것 이라 생각했지만 django의 back-end 작업에서 어려움을 겪었다. 하지만 조원 모두 힘을 합쳐 해결하였다. 최종적으로 저번 프로젝트와 연계하여 완성된 하나의 프로젝트를 완수하여 성취감을 느낄 수 있었다.
-### 👩‍💻 이지수
-- 이번 프로젝트에서 aws에서 환경 설정을 세팅하는 역할을 맡았고,
-aws에서 웹 페이지를 동작할 수 있는 프로젝트를 진행한 것이 좋은 경험이 되었다고 생각합니다. 
-실전에서 잘 응용할 수 있는 밑거름이 되었다고 생각합니다. 
+### 👨‍💻 박병헌 Park Byung Hun
+- I initially thought migrating from Streamlit to Django would be easy, but faced challenges in Django backend work. However, with teamwork, we overcame them. Connecting this with the previous project gave me a great sense of achievement.
+### 👩‍💻 이지수 Lee Ji Su
+- I was in charge of configuring the AWS environment. Successfully running a web page on AWS was a valuable experience and will serve as a solid foundation for real-world applications.
 
-### 👨‍💻 오종수
-- 팀원들과 함께 목표를 달성한 것이 매우 뜻깊은 경험이었습니다
+### 👨‍💻 오종수 O Jong Su 
+- Achieving our goal as a team was a very meaningful experience.
