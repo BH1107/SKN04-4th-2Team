@@ -1,6 +1,6 @@
-# 🤗 팀명 : Rolling
+# 🤗 Team Name : Rolling
  
-### 🤭 팀원
+### 🤭 Members
 
 <p align="center">
   <table>
